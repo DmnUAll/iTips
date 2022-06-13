@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tips Calculate View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TipsCalculateViewController" customModule="iTips" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TfO-eN-HiJ" userLabel="Top Stack View">
+                                <rect key="frame" x="0.0" y="49" width="375" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7e-2A-N8G">
+                                        <rect key="frame" x="5" y="0.0" width="365" height="29"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                        <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="e.g. 123.45" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryd-G1-brb">
+                                        <rect key="frame" x="5" y="29" width="365" height="91"/>
+                                        <color key="tintColor" red="0.65360911939999999" green="0.67469575370000001" blue="0.82312481810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <action selector="billFieldChanging:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="h08-ZG-Gyl"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ryd-G1-brb" secondAttribute="trailing" constant="5" id="5Nv-Cr-MdT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="D6h-KN-Nf3"/>
+                                    <constraint firstItem="o7e-2A-N8G" firstAttribute="leading" secondItem="TfO-eN-HiJ" secondAttribute="leading" constant="5" id="UKn-DX-UFa"/>
+                                    <constraint firstItem="ryd-G1-brb" firstAttribute="centerX" secondItem="TfO-eN-HiJ" secondAttribute="centerX" id="Y6g-V1-QOs"/>
+                                    <constraint firstItem="ryd-G1-brb" firstAttribute="leading" secondItem="TfO-eN-HiJ" secondAttribute="leading" constant="5" id="yEh-Xk-xzU"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1y-H6-Ryd" userLabel="Bottom View">
+                                <rect key="frame" x="0.0" y="179" width="375" height="633"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="j2P-DB-DNj" userLabel="Slider Label View">
+                                        <rect key="frame" x="5" y="15" width="365" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tips amount (in percents):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5a-ei-OBD" userLabel="Tips amount (in percents):">
+                                                <rect key="frame" x="0.0" y="0.0" width="304.33333333333331" height="29"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                                <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrS-Ge-qj0">
+                                                <rect key="frame" x="328.33333333333331" y="0.0" width="36.666666666666686" height="29"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                                <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="biL-WZ-HNS" userLabel="Slider View">
+                                        <rect key="frame" x="5" y="59" width="365" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1A-QP-bcO">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                                <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XdE-p0-Bou">
+                                                <rect key="frame" x="3" y="0.0" width="359" height="31"/>
+                                                <connections>
+                                                    <action selector="tipsChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cbc-60-1Rh"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceN-zZ-aHT">
+                                                <rect key="frame" x="365" y="0.0" width="0.0" height="30"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                                <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vhj-Ms-1I2">
+                                        <rect key="frame" x="5" y="104" width="365" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Persons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4j-EA-oBu">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="QkZ-G7-JAY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                                <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7l-7R-eTd">
+                                                <rect key="frame" x="124" y="0.0" width="117" height="32"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                                <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OGV-4f-whP">
+                                                <rect key="frame" x="271" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="personsChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5ML-WV-Qt1"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="p7l-7R-eTd" firstAttribute="centerX" secondItem="vhj-Ms-1I2" secondAttribute="centerX" id="P5E-cO-6ah"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63929602259999996" green="0.82312481810000004" blue="0.76314752279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="biL-WZ-HNS" firstAttribute="top" secondItem="j2P-DB-DNj" secondAttribute="bottom" constant="15" id="EPR-VI-LAk"/>
+                                    <constraint firstItem="j2P-DB-DNj" firstAttribute="top" secondItem="w1y-H6-Ryd" secondAttribute="top" constant="15" id="EtD-oS-gBe"/>
+                                    <constraint firstItem="biL-WZ-HNS" firstAttribute="leading" secondItem="w1y-H6-Ryd" secondAttribute="leadingMargin" constant="-3" id="I64-SZ-k7q"/>
+                                    <constraint firstItem="vhj-Ms-1I2" firstAttribute="leading" secondItem="w1y-H6-Ryd" secondAttribute="leadingMargin" constant="-3" id="UBz-dS-hGV"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="vhj-Ms-1I2" secondAttribute="trailing" constant="-3" id="cOw-Kl-RJs"/>
+                                    <constraint firstItem="j2P-DB-DNj" firstAttribute="leading" secondItem="w1y-H6-Ryd" secondAttribute="leadingMargin" constant="-3" id="iKn-VZ-wJr"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="j2P-DB-DNj" secondAttribute="trailing" constant="-3" id="pWZ-i7-rFD"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="biL-WZ-HNS" secondAttribute="trailing" constant="-3" id="rHd-eM-d6b"/>
+                                    <constraint firstItem="vhj-Ms-1I2" firstAttribute="top" secondItem="biL-WZ-HNS" secondAttribute="bottom" constant="15" id="zWf-cm-Tcm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-1N-tto">
+                                <rect key="frame" x="119" y="729.33333333333337" width="137" height="48.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48.670000000000002" id="FNV-g4-vxW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136.66999999999999" id="Y3S-La-0lU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calculate">
+                                    <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.40886019110332278" green="0.40778967911447794" blue="0.42648885707662554" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.65490196078431373" green="0.67450980392156867" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6x-Rb-DW1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.83746182089999999" green="1" blue="0.83281741519999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TfO-eN-HiJ" secondAttribute="trailing" id="21X-Ws-AAA"/>
+                            <constraint firstItem="TfO-eN-HiJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ACj-cu-aja"/>
+                            <constraint firstItem="w1y-H6-Ryd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MPS-nF-dZc"/>
+                            <constraint firstAttribute="bottom" secondItem="w1y-H6-Ryd" secondAttribute="bottom" id="ROe-gn-Ukb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xfc-1N-tto" secondAttribute="bottom" id="Zem-qI-vZs"/>
+                            <constraint firstAttribute="trailing" secondItem="w1y-H6-Ryd" secondAttribute="trailing" id="ds2-cA-e7o"/>
+                            <constraint firstItem="TfO-eN-HiJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="qdc-CQ-iND"/>
+                            <constraint firstItem="xfc-1N-tto" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tMQ-sX-Ydr"/>
+                            <constraint firstItem="w1y-H6-Ryd" firstAttribute="top" secondItem="TfO-eN-HiJ" secondAttribute="bottom" constant="10" id="uz7-YE-Usj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billField" destination="ryd-G1-brb" id="hFd-PD-SaB"/>
+                        <outlet property="personsLabel" destination="p7l-7R-eTd" id="54O-td-N4i"/>
+                        <outlet property="personsStepper" destination="OGV-4f-whP" id="TBf-tj-E1y"/>
+                        <outlet property="tipsLabel" destination="RrS-Ge-qj0" id="RI1-9L-4D2"/>
+                        <outlet property="tipsSlider" destination="XdE-p0-Bou" id="u7o-1f-CMG"/>
+                        <segue destination="d2L-Xt-wIa" kind="presentation" identifier="toResult" id="ac9-qG-OX0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.6" y="93.842364532019715"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="jOn-E0-zju">
+            <objects>
+                <viewController id="d2L-Xt-wIa" customClass="ResultViewController" customModule="iTips" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oww-SG-psp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zft-Cw-K7z">
+                                <rect key="frame" x="0.0" y="5" width="375" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyM-3Z-8Ub">
+                                        <rect key="frame" x="100.66666666666667" y="0.0" width="173.66666666666663" height="29"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                        <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAf-bF-fEZ">
+                                        <rect key="frame" x="44" y="37" width="287" height="113"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="50"/>
+                                        <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="M0u-GR-jqy"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crq-pa-T5L">
+                                <rect key="frame" x="0.0" y="155" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYr-13-ZRp">
+                                        <rect key="frame" x="187.66666666666666" y="20" width="0.0" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="67" id="plg-0c-Ke9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                        <color key="textColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83921568629999999" green="1" blue="0.83281741519999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="eYr-13-ZRp" firstAttribute="top" secondItem="crq-pa-T5L" secondAttribute="top" constant="20" id="KUB-oq-ATJ"/>
+                                    <constraint firstItem="eYr-13-ZRp" firstAttribute="centerX" secondItem="crq-pa-T5L" secondAttribute="centerX" id="z4v-y8-H2F"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-MJ-ZTs">
+                                <rect key="frame" x="107" y="675" width="161" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="YHq-jy-HI1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="wPA-JM-npr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Recalculate">
+                                    <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                    <color key="baseForegroundColor" red="0.40886019109999999" green="0.40778967910000002" blue="0.42648885710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.65360911939999999" green="0.67469575370000001" blue="0.82312481810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqg-Fo-hu3"/>
+                                    <action selector="recalculatePressed:" destination="d2L-Xt-wIa" eventType="touchUpInside" id="wFv-fL-dlh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="StD-hB-2QZ"/>
+                        <color key="backgroundColor" red="0.63300810060000001" green="0.82312481810000004" blue="0.77450999099999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zft-Cw-K7z" secondAttribute="trailing" id="68C-lm-uMX"/>
+                            <constraint firstAttribute="bottom" secondItem="crq-pa-T5L" secondAttribute="bottom" id="I7z-Cx-UTL"/>
+                            <constraint firstItem="fPi-MJ-ZTs" firstAttribute="centerX" secondItem="oww-SG-psp" secondAttribute="centerX" id="UVF-5B-dR5"/>
+                            <constraint firstItem="zft-Cw-K7z" firstAttribute="leading" secondItem="oww-SG-psp" secondAttribute="leading" id="gJ8-SH-IG2"/>
+                            <constraint firstItem="crq-pa-T5L" firstAttribute="leading" secondItem="oww-SG-psp" secondAttribute="leading" id="lJr-NP-7nN"/>
+                            <constraint firstItem="zft-Cw-K7z" firstAttribute="top" secondItem="oww-SG-psp" secondAttribute="top" constant="5" id="ojg-jA-RuI"/>
+                            <constraint firstItem="fPi-MJ-ZTs" firstAttribute="bottom" secondItem="StD-hB-2QZ" secondAttribute="bottom" id="pr0-Bx-UuW"/>
+                            <constraint firstAttribute="trailing" secondItem="crq-pa-T5L" secondAttribute="trailing" id="xbm-PB-gH2"/>
+                            <constraint firstItem="crq-pa-T5L" firstAttribute="top" secondItem="zft-Cw-K7z" secondAttribute="bottom" id="ziD-Qs-1Qk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="eYr-13-ZRp" id="krZ-Hp-E1m"/>
+                        <outlet property="totalLabel" destination="KAf-bF-fEZ" id="TBv-th-X6n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fN3-sn-I0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874.39999999999998" y="93.842364532019715"/>
+        </scene>
+    </scenes>
+</document>

@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		611726FC2709A8DB005260EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611726FB2709A8DB005260EC /* AppDelegate.swift */; };
 		611726FE2709A8DB005260EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611726FD2709A8DB005260EC /* SceneDelegate.swift */; };
-		611727002709A8DB005260EC /* TipsCalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611726FF2709A8DB005260EC /* TipsCalculateViewController.swift */; };
-		611727032709A8DB005260EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 611727012709A8DB005260EC /* Main.storyboard */; };
 		611727082709A8DC005260EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 611727062709A8DC005260EC /* LaunchScreen.storyboard */; };
-		611727132709B8A6005260EC /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611727122709B8A6005260EC /* ResultViewController.swift */; };
+		611AA4692962F9E90011025D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA4682962F9E90011025D /* UIColor+Extensions.swift */; };
+		611AA46B2962FC200011025D /* CountParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA46A2962FC200011025D /* CountParametersView.swift */; };
+		611AA46D2962FD7A0011025D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA46C2962FD7A0011025D /* UIView+Extensions.swift */; };
+		611AA46F2962FF610011025D /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA46E2962FF610011025D /* UIScreen+Extensions.swift */; };
+		611AA47129630C180011025D /* CountParametersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA47029630C180011025D /* CountParametersController.swift */; };
+		611AA47329632D230011025D /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA47229632D230011025D /* ResultView.swift */; };
+		611AA4752963305C0011025D /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA4742963305C0011025D /* ResultController.swift */; };
+		611AA477296333040011025D /* CountParametersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA476296333040011025D /* CountParametersPresenter.swift */; };
+		611AA47B29643C000011025D /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA47A29643C000011025D /* ResultPresenter.swift */; };
+		611AA47E296450D20011025D /* BillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611AA47D296450D20011025D /* BillModel.swift */; };
 		6146CEB3270E0F9200A8ABBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611727042709A8DC005260EC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +27,19 @@
 		611726F82709A8DA005260EC /* iTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		611726FB2709A8DB005260EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		611726FD2709A8DB005260EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		611726FF2709A8DB005260EC /* TipsCalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCalculateViewController.swift; sourceTree = "<group>"; };
-		611727022709A8DB005260EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		611727042709A8DC005260EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		611727072709A8DC005260EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		611727092709A8DC005260EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		611727122709B8A6005260EC /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		611AA4682962F9E90011025D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		611AA46A2962FC200011025D /* CountParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountParametersView.swift; sourceTree = "<group>"; };
+		611AA46C2962FD7A0011025D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		611AA46E2962FF610011025D /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
+		611AA47029630C180011025D /* CountParametersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountParametersController.swift; sourceTree = "<group>"; };
+		611AA47229632D230011025D /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		611AA4742963305C0011025D /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		611AA476296333040011025D /* CountParametersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountParametersPresenter.swift; sourceTree = "<group>"; };
+		611AA47A29643C000011025D /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
+		611AA47D296450D20011025D /* BillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +75,8 @@
 				611727112709A91D005260EC /* Model */,
 				611727102709A909005260EC /* View */,
 				6117270F2709A8F7005260EC /* Controller */,
-				611727042709A8DC005260EC /* Assets.xcassets */,
-				611727092709A8DC005260EC /* Info.plist */,
+				611AA4652962F93A0011025D /* Presenter */,
+				611AA4662962F9490011025D /* Supporting Files */,
 			);
 			path = iTips;
 			sourceTree = "<group>";
@@ -70,8 +84,8 @@
 		6117270F2709A8F7005260EC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				611726FF2709A8DB005260EC /* TipsCalculateViewController.swift */,
-				611727122709B8A6005260EC /* ResultViewController.swift */,
+				611AA47029630C180011025D /* CountParametersController.swift */,
+				611AA4742963305C0011025D /* ResultController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -79,8 +93,9 @@
 		611727102709A909005260EC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				611727012709A8DB005260EC /* Main.storyboard */,
 				611727062709A8DC005260EC /* LaunchScreen.storyboard */,
+				611AA46A2962FC200011025D /* CountParametersView.swift */,
+				611AA47229632D230011025D /* ResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -88,10 +103,40 @@
 		611727112709A91D005260EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				611726FB2709A8DB005260EC /* AppDelegate.swift */,
-				611726FD2709A8DB005260EC /* SceneDelegate.swift */,
+				611AA47D296450D20011025D /* BillModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		611AA4652962F93A0011025D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				611AA476296333040011025D /* CountParametersPresenter.swift */,
+				611AA47A29643C000011025D /* ResultPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		611AA4662962F9490011025D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				611AA4672962F9660011025D /* Helpers */,
+				611726FB2709A8DB005260EC /* AppDelegate.swift */,
+				611726FD2709A8DB005260EC /* SceneDelegate.swift */,
+				611727042709A8DC005260EC /* Assets.xcassets */,
+				611727092709A8DC005260EC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		611AA4672962F9660011025D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				611AA4682962F9E90011025D /* UIColor+Extensions.swift */,
+				611AA46C2962FD7A0011025D /* UIView+Extensions.swift */,
+				611AA46E2962FF610011025D /* UIScreen+Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +149,7 @@
 				611726F42709A8DA005260EC /* Sources */,
 				611726F52709A8DA005260EC /* Frameworks */,
 				611726F62709A8DA005260EC /* Resources */,
+				611AA47C2964507C0011025D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -154,35 +200,55 @@
 			files = (
 				611727082709A8DC005260EC /* LaunchScreen.storyboard in Resources */,
 				6146CEB3270E0F9200A8ABBF /* Assets.xcassets in Resources */,
-				611727032709A8DB005260EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		611AA47C2964507C0011025D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		611726F42709A8DA005260EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				611727002709A8DB005260EC /* TipsCalculateViewController.swift in Sources */,
+				611AA47B29643C000011025D /* ResultPresenter.swift in Sources */,
+				611AA46D2962FD7A0011025D /* UIView+Extensions.swift in Sources */,
+				611AA4692962F9E90011025D /* UIColor+Extensions.swift in Sources */,
+				611AA47129630C180011025D /* CountParametersController.swift in Sources */,
+				611AA47E296450D20011025D /* BillModel.swift in Sources */,
+				611AA4752963305C0011025D /* ResultController.swift in Sources */,
+				611AA46B2962FC200011025D /* CountParametersView.swift in Sources */,
+				611AA477296333040011025D /* CountParametersPresenter.swift in Sources */,
 				611726FC2709A8DB005260EC /* AppDelegate.swift in Sources */,
+				611AA46F2962FF610011025D /* UIScreen+Extensions.swift in Sources */,
+				611AA47329632D230011025D /* ResultView.swift in Sources */,
 				611726FE2709A8DB005260EC /* SceneDelegate.swift in Sources */,
-				611727132709B8A6005260EC /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		611727012709A8DB005260EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				611727022709A8DB005260EC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		611727062709A8DC005260EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -320,10 +386,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WTLW784B9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iTips/Info.plist;
+				INFOPLIST_FILE = "iTips/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -332,11 +397,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Ilya.I-Am-Rich-AppBrewery";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ilya.iTips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -350,10 +418,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WTLW784B9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iTips/Info.plist;
+				INFOPLIST_FILE = "iTips/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -362,11 +429,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Ilya.I-Am-Rich-AppBrewery";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ilya.iTips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

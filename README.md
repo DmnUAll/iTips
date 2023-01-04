@@ -6,5 +6,6 @@ App to count the tips amount between the given number of persons
 
 This project was the third app writen by myself. It helped me to understand an UIStepper, UISlider and UITapGestureRecognizer methods a little further.
 It is also the first application with a transition to another screen.
+
 At some moment - the project was refactored to exclude a storyboard UI design. All UI is writen by code since then, but i saved my first project realisation into a separate branch, called ui_by_storyboard(before_refactoring).
 
